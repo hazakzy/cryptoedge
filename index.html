@@ -5,6 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CryptoEdge</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles can be added here if needed */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        header {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header .logo h1 {
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        header nav ul li a:hover {
+            color: #f0f0f0;
+        }
+        #hero {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+        #hero h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        #hero .cta-button {
+            display: inline-block;
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        #hero .cta-button:hover {
+            background-color: #0e70c6;
+        }
+        #showcase {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+        #showcase h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        .showcase-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .showcase-item {
+            flex: 0 0 calc(33.3333% - 20px);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .showcase-item:hover {
+            transform: translateY(-5px);
+        }
+        .showcase-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .showcase-item p {
+            font-size: 16px;
+            color: #666;
+        }
+        .showcase-item a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .showcase-item a:hover {
+            color: #0e70c6;
+        }
+        footer {
+            background-color: #1e90ff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,13 +137,13 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#signals">Signals</a></li>
-                    <li><a href="#yield-strategies">Yield Strategies</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="signals.html">Signals</a></li>
+                    <li><a href="yield-strategies.html">Yield Strategies</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,77 +153,25 @@
         <div class="container">
             <h2>Welcome to CryptoEdge</h2>
             <p>Your source for the latest crypto news, signals, and DeFi yield strategies.</p>
-            <a href="#get-started" class="cta-button">Get Started</a>
+            <a href="get-started.html" class="cta-button">Get Started</a>
         </div>
     </section>
 
-    <section id="latest-news">
+    <section id="showcase">
         <div class="container">
-            <h2>Latest News and Updates</h2>
-            <div class="news-grid">
-                <div class="news-item">
-                    <img src="news1.jpg" alt="News 1">
-                    <h3>News Headline 1</h3>
-                    <p>Brief description of the news article. <a href="#">Read more</a></p>
+            <h2>Why Choose CryptoEdge?</h2>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <h3>Latest Crypto News</h3>
+                    <p>Stay updated with the latest trends and developments in the cryptocurrency world. <a href="news.html">Learn more</a></p>
                 </div>
-                <div class="news-item">
-                    <img src="news2.jpg" alt="News 2">
-                    <h3>News Headline 2</h3>
-                    <p>Brief description of the news article. <a href="#">Read more</a></p>
+                <div class="showcase-item">
+                    <h3>Accurate Signals</h3>
+                    <p>Get reliable trading signals for BTC, ETH, and SOL to make informed decisions. <a href="signals.html">Learn more</a></p>
                 </div>
-                <div class="news-item">
-                    <img src="news3.jpg" alt="News 3">
-                    <h3>News Headline 3</h3>
-                    <p>Brief description of the news article. <a href="#">Read more</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="highlighted-signals">
-        <div class="container">
-            <h2>Highlighted Crypto Signals</h2>
-            <div class="signals-grid">
-                <div class="signal-item">
-                    <h3>BTC</h3>
-                    <p>Sentiment: Positive</p>
-                    <p>Signal Strength: Strong</p>
-                </div>
-                <div class="signal-item">
-                    <h3>ETH</h3>
-                    <p>Sentiment: Neutral</p>
-                    <p>Signal Strength: Moderate</p>
-                </div>
-                <div class="signal-item">
-                    <h3>SOL</h3>
-                    <p>Sentiment: Negative</p>
-                    <p>Signal Strength: Weak</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="featured-tokens">
-        <div class="container">
-            <h2>Featured Tokens</h2>
-            <div class="tokens-grid">
-                <div class="token-item">
-                    <h3>BTC</h3>
-                    <p>Price: $30,000</p>
-                    <p>Market Cap: $600B</p>
-                    <p>Volume: $10B</p>
-                </div>
-                <div class="token-item">
-                    <h3>ETH</h3>
-                    <p>Price: $2,000</p>
-                    <p>Market Cap: $200B</p>
-                    <p>Volume: $5B</p>
-                </div>
-                <div class="token-item">
-                    <h3>SOL</h3>
-                    <p>Price: $35</p>
-                    <p>Market Cap: $10B</p>
-                    <p>Volume: $1B</p>
+                <div class="showcase-item">
+                    <h3>Yield Strategies</h3>
+                    <p>Explore effective yield strategies in DeFi to maximize your returns. <a href="yield-strategies.html">Learn more</a></p>
                 </div>
             </div>
         </div>

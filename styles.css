@@ -1,24 +1,33 @@
+/* Updated CSS with design improvements */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 header {
-    background-color: #333;
+    background-color: #1e90ff;
     color: #fff;
     padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .logo h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
+    text-transform: uppercase;
 }
 
 header nav ul {
@@ -36,44 +45,88 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f0f0f0;
 }
 
 #hero {
-    background-color: #1e90ff;
+    background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 50px 0;
+    padding: 80px 0;
+}
+
+#hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 #hero .cta-button {
     display: inline-block;
-    background-color: #333;
+    background-color: #1e90ff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-#latest-news, #highlighted-signals, #featured-tokens {
-    padding: 50px 0;
-    background-color: #fff;
+#hero .cta-button:hover {
+    background-color: #0e70c6;
 }
 
-#latest-news h2, #highlighted-signals h2, #featured-tokens h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.news-grid, .signals-grid, .tokens-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
+/* Additional sections styling can be similarly refined */
 
 footer {
-    background-color: #333;
+    background-color: #1e90ff;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo h1 {
+        font-size: 24px;
+    }
+    
+    #hero {
+        padding: 60px 0;
+    }
+    
+    #hero h2 {
+        font-size: 28px;
+    }
+    
+    #hero p {
+        font-size: 16px;
+    }
+    
+    #hero .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
