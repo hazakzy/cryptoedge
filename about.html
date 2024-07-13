@@ -6,57 +6,46 @@
     <title>About Us - CryptoEdge</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional styles specific to about.html */
+        /* Example CSS styles */
         .about-section {
-            background-color: #fff;
-            padding: 50px 0;
-            text-align: center;
-        }
-        .about-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .about-section p {
-            font-size: 18px;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-        .team-members {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .team-member {
-            width: calc(33.3333% - 40px);
-            margin: 20px;
-            background-color: #f9f9f9;
+            margin-top: 20px;
             padding: 20px;
+            background-color: #f9f9f9;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out;
-            text-align: center;
         }
-        .team-member:hover {
-            transform: translateY(-5px);
+
+        .about-section h2 {
+            margin-bottom: 10px;
         }
+
+        .team-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-section h2 {
+            margin-bottom: 10px;
+        }
+
+        .team-member {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
         .team-member img {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .team-member h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .team-member p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 10px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -73,6 +62,7 @@
                     <li><a href="signals.html">Signals</a></li>
                     <li><a href="yield-strategies.html">Yield Strategies</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="airdrop-hunt.html">Airdrop Hunt</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -80,36 +70,39 @@
         </div>
     </header>
 
-    <section class="about-section">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>CryptoEdge is dedicated to providing you with the latest news, accurate trading signals, and effective yield strategies in the cryptocurrency and DeFi space. We strive to empower our users with valuable insights and opportunities for success.</p>
+    <section id="about" class="container">
+        <div class="about-section">
+            <h2>About CryptoEdge</h2>
+            <p>CryptoEdge is your premier source for cryptocurrency news, trading signals, and yield strategies in the DeFi space. We aim to provide reliable and actionable information to help you navigate the complexities of the crypto market.</p>
+            
+            <h3>Our Mission</h3>
+            <p>To empower individuals with the knowledge and tools to participate in and benefit from the crypto revolution.</p>
+            
+            <h3>Our Vision</h3>
+            <p>To become a trusted platform known for delivering insightful analysis and valuable resources in the cryptocurrency ecosystem.</p>
+            
+            <h3>Key Milestones</h3>
+            <ul>
+                <li>Established CryptoEdge in 2020.</li>
+                <li>Reached 100,000 subscribers in 2022.</li>
+                <li>Launched premium signal services in 2023.</li>
+            </ul>
         </div>
-    </section>
 
-    <section class="team-section">
-        <div class="container">
-            <h2>Our Team</h2>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="team-leader.jpg" alt="Hazakzy - Team Leader">
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            
+            <div class="team-member">
+                <img src="team/hazakzy.jpg" alt="Hazakzy">
+                <div>
                     <h3>Hazakzy</h3>
-                    <p>Founder & Team Leader</p>
-                    <p>Hazak Shuaibu is a seasoned crypto enthusiast with over five years of experience. He has a strong background in tech-related fields and is passionate about innovation in the blockchain space.</p>
-                </div>
-                <div class="team-member">
-                    <img src="team-member1.jpg" alt="Team Member 1">
-                    <h3>Crusher C.</h3>
-                    <p>Crypto Analyst</p>
-                    <p>Crypto Crusher specializes in technical analysis and market trends. With a background in finance, he brings analytical skills and insights to our trading strategies.</p>
-                </div>
-                <div class="team-member">
-                    <img src="team-member2.jpg" alt="Team Member 2">
-                    <h3>Jane Smith</h3>
-                    <p>Content Manager</p>
-                    <p>Jane Smith oversees content creation and editorial strategy. She ensures our articles and updates are informative, engaging, and relevant to our audience.</p>
+                    <p>Founder & CEO</p>
+                    <p>Hazak Shuaibu has been in the crypto space for over five years and has a background in tech-related fields.</p>
+                    <p><a href="#">Connect on LinkedIn</a></p>
                 </div>
             </div>
+            
+            <!-- Add more team members as needed -->
         </div>
     </section>
 
@@ -118,5 +111,6 @@
             <p>&copy; 2024 CryptoEdge. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
