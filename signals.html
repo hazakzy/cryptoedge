@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signals - CryptoEdge</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Example CSS styles */
+        .signal-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .signal-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .performance-table {
+            margin-top: 20px;
+        }
+        
+        .performance-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .performance-table th, .performance-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        
+        .subscription {
+            margin-top: 20px;
+        }
+        
+        .subscription .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,6 +62,7 @@
                     <li><a href="signals.html">Signals</a></li>
                     <li><a href="yield-strategies.html">Yield Strategies</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="airdrop-hunt.html">Airdrop Hunt</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -26,23 +70,49 @@
         </div>
     </header>
 
-    <section id="signals">
+    <section id="detailed-analysis">
         <div class="container">
-            <h2>Trading Signals</h2>
-            <div class="signals-grid">
+            <h2>Detailed Analysis</h2>
+            <div class="signal-details">
                 <div class="signal-item">
-                    <h3>BTC Signal</h3>
-                    <p>Buy at $30,000, Sell at $35,000. <a href="#">Learn more</a></p>
+                    <h3>Bitcoin (BTC) Signal</h3>
+                    <p>Technical indicators suggest a bullish trend with strong support at $40,000. Market sentiment is positive following recent regulatory developments.</p>
                 </div>
-                <div class="signal-item">
-                    <h3>ETH Signal</h3>
-                    <p>Buy at $1,800, Sell at $2,200. <a href="#">Learn more</a></p>
-                </div>
-                <div class="signal-item">
-                    <h3>SOL Signal</h3>
-                    <p>Buy at $25, Sell at $30. <a href="#">Learn more</a></p>
-                </div>
+                <!-- Add more signal items as needed -->
             </div>
+        </div>
+    </section>
+
+    <section id="historical-performance">
+        <div class="container">
+            <h2>Historical Performance</h2>
+            <div class="performance-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Signal</th>
+                            <th>Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-07-15</td>
+                            <td>Bitcoin (BTC)</td>
+                            <td>Successful, +5% gain</td>
+                        </tr>
+                        <!-- Add more rows for other signals -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscription">
+        <div class="container">
+            <h2>Subscribe to Premium Signals</h2>
+            <p>Get access to exclusive premium signals with detailed analysis and real-time updates.</p>
+            <a href="subscribe.html" class="cta-button">Subscribe Now</a>
         </div>
     </section>
 

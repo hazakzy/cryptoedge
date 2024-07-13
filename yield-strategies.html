@@ -5,6 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yield Strategies - CryptoEdge</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Example CSS styles */
+        .calculator {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .calculator h3 {
+            margin-bottom: 10px;
+        }
+        
+        .calculator p {
+            margin-bottom: 20px;
+        }
+        
+        .calculator form {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .calculator label {
+            display: block;
+            font-weight: bold;
+        }
+        
+        .calculator input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .calculator button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .calculator button:hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .modal h3 {
+            margin-bottom: 10px;
+        }
+
+        .modal p {
+            margin-bottom: 15px;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,6 +96,7 @@
                     <li><a href="signals.html">Signals</a></li>
                     <li><a href="yield-strategies.html">Yield Strategies</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="airdrop-hunt.html">Airdrop Hunt</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -26,23 +104,60 @@
         </div>
     </header>
 
-    <section id="yield-strategies">
+    <section id="calculator">
         <div class="container">
-            <h2>Yield Strategies in DeFi</h2>
-            <div class="strategies-grid">
-                <div class="strategy-item">
-                    <h3>Strategy 1</h3>
-                    <p>Description of the yield strategy. <a href="#">Learn more</a></p>
-                </div>
-                <div class="strategy-item">
-                    <h3>Strategy 2</h3>
-                    <p>Description of the yield strategy. <a href="#">Learn more</a></p>
-                </div>
-                <div class="strategy-item">
-                    <h3>Strategy 3</h3>
-                    <p>Description of the yield strategy. <a href="#">Learn more</a></p>
-                </div>
+            <h2>Yield Calculator</h2>
+            <div class="calculator">
+                <h3>Estimate Your Potential Returns</h3>
+                <p>Use our interactive calculator to estimate potential returns from different yield strategies.</p>
+                <form id="yield-calculator">
+                    <label for="principal">Principal Amount:</label>
+                    <input type="number" id="principal" name="principal" required>
+                    
+                    <label for="annual-interest">Annual Interest Rate (%):</label>
+                    <input type="number" id="annual-interest" name="annual-interest" required>
+                    
+                    <label for="time-period">Time Period (months):</label>
+                    <input type="number" id="time-period" name="time-period" required>
+                    
+                    <button type="submit">Calculate</button>
+                </form>
             </div>
+        </div>
+    </section>
+
+    <div id="result-modal" class="modal">
+        <div class="container">
+            <span class="close">&times;</span>
+            <h3>Estimated Returns</h3>
+            <div id="results">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <section id="success-stories">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="success-stories">
+                <div class="success-story">
+                    <h3>Case Study: Yield Farming on Ethereum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed justo in nisi scelerisque dignissim.</p>
+                </div>
+                <!-- Add more success stories as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="defi-protocols">
+        <div class="container">
+            <h2>Understanding DeFi Protocols</h2>
+            <p>Educational content on different DeFi protocols and how they can be utilized for yield farming.</p>
+            <ul>
+                <li>Ethereum (ETH) - Explanation of ERC-20 tokens and liquidity pools.</li>
+                <li>Solana (SOL) - Overview of yield strategies on Solana's decentralized exchanges.</li>
+                <!-- Add more protocols and explanations as needed -->
+            </ul>
         </div>
     </section>
 
@@ -51,5 +166,41 @@
             <p>&copy; 2024 CryptoEdge. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('yield-calculator').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Retrieve input values
+            const principal = parseFloat(document.getElementById('principal').value);
+            const annualInterest = parseFloat(document.getElementById('annual-interest').value);
+            const timePeriod = parseFloat(document.getElementById('time-period').value);
+
+            // Calculate yield
+            const monthlyInterestRate = annualInterest / 100 / 12;
+            const totalMonths = timePeriod;
+            const totalInterest = principal * monthlyInterestRate * totalMonths;
+            const totalAmount = principal + totalInterest;
+
+            // Display results in modal
+            const modal = document.getElementById('result-modal');
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <p>Principal Amount: $${principal}</p>
+                <p>Annual Interest Rate: ${annualInterest}%</p>
+                <p>Time Period: ${timePeriod} months</p>
+                <p>Total Interest Earned: $${totalInterest.toFixed(2)}</p>
+                <p>Total Amount after ${timePeriod} months: $${totalAmount.toFixed(2)}</p>
+            `;
+
+            modal.style.display = 'block';
+
+            // Close modal when clicking the close button
+            const closeBtn = document.querySelector('.close');
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>

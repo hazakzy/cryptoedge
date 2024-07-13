@@ -5,6 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - CryptoEdge</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Example CSS styles */
+        .comments {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comments h3 {
+            margin-bottom: 10px;
+        }
+
+        .comments form {
+            margin-top: 10px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .comments label {
+            font-weight: bold;
+        }
+
+        .comments textarea {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .comments button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comments button:hover {
+            background-color: #0056b3;
+        }
+
+        .posts {
+            margin-top: 20px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .post {
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h2 {
+            margin-bottom: 10px;
+        }
+
+        .post p {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,6 +85,7 @@
                     <li><a href="signals.html">Signals</a></li>
                     <li><a href="yield-strategies.html">Yield Strategies</a></li>
                     <li><a href="about.html">About Us</a></li>
+                    <li><a href="airdrop-hunt.html">Airdrop Hunt</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -26,23 +93,28 @@
         </div>
     </header>
 
-    <section id="blog">
-        <div class="container">
-            <h2>CryptoEdge Blog</h2>
-            <div class="blog-grid">
-                <div class="blog-item">
-                    <h3>Blog Post 1</h3>
-                    <p>Excerpt from the blog post. <a href="#">Read more</a></p>
-                </div>
-                <div class="blog-item">
-                    <h3>Blog Post 2</h3>
-                    <p>Excerpt from the blog post. <a href="#">Read more</a></p>
-                </div>
-                <div class="blog-item">
-                    <h3>Blog Post 3</h3>
-                    <p>Excerpt from the blog post. <a href="#">Read more</a></p>
-                </div>
+    <section id="comments" class="container">
+        <div class="comments">
+            <h2>Join the Discussion</h2>
+            <form id="comment-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                
+                <button type="submit">Post Comment</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="posts" class="container">
+        <div class="posts">
+            <div class="post">
+                <h2>Exploring DeFi Yield Strategies</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed justo in nisi scelerisque dignissim.</p>
             </div>
+            <!-- Add more posts as needed -->
         </div>
     </section>
 
@@ -51,5 +123,20 @@
             <p>&copy; 2024 CryptoEdge. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Process comment submission here (e.g., send to backend, update UI)
+            // Example: Display a confirmation message
+            alert('Your comment has been submitted!');
+            
+            // Optionally, clear the form fields after submission
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+
 </body>
 </html>
